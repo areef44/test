@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+<h1 id="fulan"><h1><h1>Fulan</h1></h1></h1>
+<input type="text" value="Fulanah" id="fulanah">
+<button class="submit">Submit</button>
+
+<ul>
+    <li>Fulan</li>
+    <li>Fulanah</li>
+    <li>John Doe</li>
+</ul>
+
+
+<a href="https://google.com" id="link">Link</a><br>
+
+
+<input type="text" value="password" id="password" class="form-password">
+<input type="checkbox" class="form-checkbox"> Show password
+<button class="submit" type="submit" id="link_sir_wing_i">Hilang</button>
+
+<script src="https://code.jquery.com/jquery-3.6.2.min.js" integrity="sha256-2krYZKh//PcchRtd+H+VyyQoZ/e3EcrkxhM8ycwASPA=" crossorigin="anonymous"></script>
+<script>
+
+    // let fulan = $("#fulan");
+    // // fulan.html("<span>John Doe</span>")
+    // console.log(fulan.html());
+    // let fulanChild = fulan.children();
+    // console.log(fulanChild[0]);
+    // console.log(fulanChild.eq(0));
+
+
+    // let fulanah = $('#fulanah');
+    // // fulanah.val("John Doe");
+    // // console.log(fulanah.val());
+
+    // let submit = $(".submit")
+    // // let submitPureJS = submit[0]
+    // let submitObject = submit.eq(0)
+    // // console.log(submitPureJS)
+    // // console.log(submitObject)
+
+
+    // // let li = $("li")
+    // // console.log(li.eq(1).html())
+    // // console.log(li.eq(-1).html())
+
+    // // let fulanah = $('#fulanah')
+    // // console.log(fulanah.input)
+
+    // // let h2 = $("h1")
+    // // console.log(h2.length)
+
+
+    // // submitObject.click(function (){
+    // //     alert(fulanah.val())
+    // // })
+
+    //  submitObject.on('click',function () {
+    //         alert(fulanah.val())
+        // })
+
+    
+    // let link = $("#link")
+    // link.attr("href","http://instagram.com")
+    // console.log(link.attr("href"))
+    // console.log(link.attr("id"))
+
+
+    let ipassword = $("#password")
+    let ilink = $("#link_sir_wing_i")
+    
+        ilink.click(function() {
+            if(ipassword.attr("type") == "text"){
+                ipassword.attr("type","password")
+                ilink.html("Muncul")
+            }
+            else{
+                ipassword.attr("type","text")
+                ilink.html("Hilang")
+            }
+        })
+
+
+        	$(document).ready(function () {
+                    $('.form-checkbox').click(function () {
+                        if ($(this).is(':checked')) {
+                            $('.form-password').attr('type', 'text');
+                        } else {
+                            $('.form-password').attr('type', 'password');
+                        }
+                    });
+                });
+            
+
+    // .ready(function () {
+    // //         $('#check').click(function () {
+    // //             alert($(this).is(':checked'));
+    // //             $(this).is(':checked') ? $('#test-input').attr('type', 'text') : $('#test-input').attr('type', 'password');
+            // });
+        // });
+
+</script>
+</body>
+</html>
